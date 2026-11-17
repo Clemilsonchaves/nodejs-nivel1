@@ -5,6 +5,9 @@ const createDb = function(path = ":memory:") {
 
   db.exec(`
     CREATE TABLE IF NOT EXISTS access_logs (
+        url TEXT NOT NULL,
+        status INTEGER NOT NULL,
+        method TEXT NOT NULL,
      ip TEXT NOT NULL,
         username TEXT NOT NULL,
         first_name TEXT NOT NULL,
